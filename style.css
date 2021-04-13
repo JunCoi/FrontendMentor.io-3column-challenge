@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 86px 130px 65px 130px;
+  background-color: var(--very-light-gray);
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  font-size: 1rem;
+  padding: 2.75em;
+  min-width: 280px;
+  letter-spacing: 1px;
+}
+
+.card h1 {
+  color: var(--transparent-white);
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 1em 0;
+}
+
+.card p {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--very-light-gray);
+  font-size: 0.75em;
+  line-height: 2;
+  padding-bottom: 4.75em;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 5px 0 0 5px;
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 5px 5px 0;
+}
+
+.sedans .btn {
+  color: var(--bright-orange);
+}
+
+.suvs .btn {
+  color: var(--dark-cyan);
+}
+
+.luxury .btn {
+  color: var(--very-dark-cyan);
+}
+
+.btn {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.9em;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 2em;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    padding: 44px 12px;
+    transform: none;
+  }
+
+  .card {
+    width: clamp(280px, 80%, 400px);
+  }
+
+  .sedans {
+    border-radius: 5px 5px 0 0;
+  }
+  .luxury {
+    border-radius: 0 0 5px 5px;
+  }
+
+  .attribution {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+}
